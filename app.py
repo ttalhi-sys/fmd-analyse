@@ -19,6 +19,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Cacher les icônes toolbar (GitHub, crayon, Deploy, etc.)
+st.markdown("""
+<style>
+    [data-testid="stToolbar"] {display: none !important;}
+    [data-testid="stDecoration"] {display: none !important;}
+    #MainMenu {display: none !important;}
+    header {visibility: hidden !important;}
+</style>
+""", unsafe_allow_html=True)
 
 # Cacher les icônes toolbar (GitHub, crayon, Deploy, etc.)
 st.markdown("""
